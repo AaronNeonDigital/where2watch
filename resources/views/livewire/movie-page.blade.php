@@ -3,8 +3,10 @@
     <div class="flex justify-center">
         <div class="rounded-lg shadow-lg bg-gray-700 text-white max-w-sm">
             <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                <img src="https://image.tmdb.org/t/p/original/{{$movie['backdrop_path']}}"
-                alt="{{$movie['title']}}" class="w-full h-64 rounded-lg rounded-b-none">
+                @if ($movie['backdrop_path'])
+                    <img src="https://image.tmdb.org/t/p/original/{{$movie['backdrop_path']}}"
+                    alt="{{$movie['title']}}" class="w-full h-64 rounded-lg rounded-b-none">
+                @endif
             </a>
             <div class="p-6">
                 <h5 class="text-white text-xl font-medium mb-2"><a href="https://www.imdb.com/title/{{$movie['imdb_id']}}" target="_blank">{{$movie['title']}}</a></h5>
