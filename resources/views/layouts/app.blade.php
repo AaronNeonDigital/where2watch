@@ -142,6 +142,16 @@
 
     @livewireScripts
     <script src="{{  mix('js/app.js')  }}"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1ZVVVL421"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-J1ZVVVL421');
+    </script>
 </body>
 
 </html>
