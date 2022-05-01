@@ -1,4 +1,4 @@
-<div class="grid grid-cols-3 gap-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
     @if ($movie)
     <div class="flex justify-center">
         <div class="rounded-lg shadow-lg bg-gray-700 text-white max-w-sm">

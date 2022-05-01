@@ -4,7 +4,7 @@
     
         
     @if ($results)
-        <div class="absolute w-full z-[1000] mt-2 grid grid-cols-4 gap-4" x-show="searchresults">
+        <div class="absolute w-full z-[1000] mt-2 grid grid-cols-2 lg:grid-cols-4 gap-4" x-show="searchresults">
                 @foreach ($results as $x => $result)
                 <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                     <a href="{{ route('movie', [$result['id']])}}">
