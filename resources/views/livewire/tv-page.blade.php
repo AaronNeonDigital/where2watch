@@ -2,11 +2,11 @@
     @if ($tv)
     <section class="bg-gray-800 text-gray-100 rounded shadow">
         <div class="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
-            <div class="relative">
+            <div class="relative block">
                 @if(isset($tv['backdrop_path']))
-                    <img src="https://image.tmdb.org/t/p/original/{{$tv['backdrop_path']}}" alt="{{$tv['name']}}" class="rounded-lg rounded-b-none opacity-25 object-cover">
+                    <img src="https://image.tmdb.org/t/p/original/{{$tv['backdrop_path']}}" alt="{{$tv['name']}}" class="rounded-lg rounded-b-none opacity-25">
                 @endif
-                <div class="absolute top-0 w-full grid-cols-1 justify-content-center justify-content-middle mt-4">
+                <div class="lg:absolute top-0 w-full block grid-cols-1 justify-content-center justify-content-middle mt-4">
                     <h2 class="text-3xl font-bold tracking-tight text-center sm:text-5xl dark:text-coolGray-50">{{$tv['name']}}</h2>
                     <p class="max-w-3xl mx-auto mt-4 text-xl text-center dark:text-coolGray-400">{{$tv['overview']}}</p>
                 </div>
