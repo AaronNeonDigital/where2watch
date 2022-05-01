@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('movie_id')->index();
-            $table->string('imdb_id')->index();
+            $table->string('imdb_id')->nullable();
             $table->string('title')->index();
             $table->text('overview')->nullable();
             $table->string('backdrop_path')->nullable();
