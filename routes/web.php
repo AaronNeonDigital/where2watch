@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\Home;
 use App\Http\Livewire\MoviePage;
+use App\Http\Livewire\TvPage;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
@@ -38,14 +39,16 @@ Route::prefix(app()->getLocale())->group(function () {
     Route::get('/', Home::class)->name('home');
 
     Route::get('/movie/{movie_id}', MoviePage::class)->name('movie');
+    Route::get('/tv/{tv_id}', TvPage::class)->name('tv');
 
     Route::get('test', function () {
-        $movie = Http::get('https://api.themoviedb.org/3/movie/597', [
+        $movie = Http::get('https://api.themoviedb.org/3/tv/1399', [
             'api_key' => env('TMDB_API_KEY'),
             'append_to_response' => 'watch/providers'
         ]);
-        // $moviesSearch = Http::get('https://api.themoviedb.org/3/movie/333', [
-        //     'api_key' => env('TMDB_API_KEY')
+        // $moviesSearch = Http::get('https://api.themoviedb.org/3/search/multi', [
+        //     'api_key' => env('TMDB_API_KEY'),
+        //     'query' => 'foo'
         // ]);
 
         return json_decode($movie->body(), true);

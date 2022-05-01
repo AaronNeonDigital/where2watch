@@ -20,7 +20,7 @@ class MovieSearch extends Component
 
     public function search() {
         //https://api.themoviedb.org/3/search/movie?api_key=a48358bdf16533039abfcfb20185aa0c&language=en-US&query=titanic&page=1&include_adult=false
-        $moviesSearch = Http::get('https://api.themoviedb.org/3/search/movie', [
+        $moviesSearch = Http::get('https://api.themoviedb.org/3/search/multi', [
            'api_key' => env('TMDB_API_KEY'),
            'query' => $this->search,
            'include_adult' => false
