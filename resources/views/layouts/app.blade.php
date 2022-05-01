@@ -22,7 +22,7 @@
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
                         <a href="/" class="flex-shrink-0">
-                            <img class="w-48 my-2" src="/img/where2watch.png"
+                            <img class="w-48 my-2" src="storage/img/where2watch.png"
                                 alt="Workflow">
                         </a>
                         
