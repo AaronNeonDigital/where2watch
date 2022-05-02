@@ -11,13 +11,13 @@
                     <p class="max-w-3xl mx-auto mt-4 text-xl text-center text-gray-400">{{$tv['overview']}}</p>
                 </div>
             </div>
-            @if (isset($tv['watch/providers']['results']['GB']))
-                @if (isset($tv['watch/providers']['results']['GB']['flatrate']))
+            @if (isset($tv['watch/providers']['results'][Cookie::get('locale')]))
+                @if (isset($tv['watch/providers']['results'][Cookie::get('locale')]['flatrate']))
                 <div>
                     <h2 class="text-3xl font-thin uppercase tracking-tight text-center sm:text-5xl text-gray-50">Subscription streams</h2>
                     
                         <div class="grid lg:grid-cols-3 grid-cols-1 mt-2 gap-4">
-                        @foreach($tv['watch/providers']['results']['GB']['flatrate'] as $provider) 
+                        @foreach($tv['watch/providers']['results'][Cookie::get('locale')]['flatrate'] as $provider) 
                             <div class="flex overflow-hidden rounded-lg bg-gray-900 text-gray-100">
                                 <div class="flex items-center justify-center px-4 bg-violet-400 text-gray-800">
                                     <img src="https://image.tmdb.org/t/p/original/{{$provider['logo_path']}}" alt="{{ $provider['provider_name'] }}" class="h-8 rounded mx-4">
@@ -31,12 +31,12 @@
                 </div>
                 @endif
             @endif
-            @if (isset($tv['providers']['results']['GB']))
-                @if (isset($tv['providers']['results']['GB']['flatrate']))
+            @if (isset($tv['providers']['results'][Cookie::get('locale')]))
+                @if (isset($tv['providers']['results'][Cookie::get('locale')]['flatrate']))
                     <div>
                         <h2 class="text-3xl font-thin uppercase tracking-tight text-center sm:text-5xl text-gray-50">Subscription streams</h2>                        
                             <div class="grid lg:grid-cols-3 grid-cols-1 mt-2 gap-4">
-                            @foreach($tv['providers']['results']['GB']['flatrate'] as $provider) 
+                            @foreach($tv['providers']['results'][Cookie::get('locale')]['flatrate'] as $provider) 
                                 <div class="flex overflow-hidden rounded-lg bg-gray-900 text-gray-100">
                                     <div class="flex items-center justify-center px-4 bg-violet-400 text-gray-800">
                                         <img src="https://image.tmdb.org/t/p/original/{{$provider['logo_path']}}" alt="{{ $provider['provider_name'] }}" class="h-8 rounded mx-4">
@@ -51,13 +51,13 @@
                 @endif
             @endif
 
-            @if (isset($tv['watch/providers']['results']['GB']))
-                @if (isset($tv['watch/providers']['results']['GB']['rent']))
+            @if (isset($tv['watch/providers']['results'][Cookie::get('locale')]))
+                @if (isset($tv['watch/providers']['results'][Cookie::get('locale')]['rent']))
                 <div>
                     <h2 class="text-3xl font-thin uppercase tracking-tight text-center sm:text-5xl text-gray-50">Rentable</h2>
                     
                         <div class="grid lg:grid-cols-3 grid-cols-1 mt-2 gap-4">
-                        @foreach($tv['watch/providers']['results']['GB']['rent'] as $provider) 
+                        @foreach($tv['watch/providers']['results'][Cookie::get('locale')]['rent'] as $provider) 
                             <div class="flex overflow-hidden rounded-lg bg-gray-900 text-gray-100">
                                 <div class="flex items-center justify-center px-4 bg-blue-400 text-gray-800">
                                     <img src="https://image.tmdb.org/t/p/original/{{$provider['logo_path']}}" alt="{{ $provider['provider_name'] }}" class="h-8 rounded mx-4">
@@ -71,12 +71,12 @@
                 </div>
                 @endif
             @endif
-            @if (isset($tv['providers']['results']['GB']))
-                @if (isset($tv['providers']['results']['GB']['rent']))
+            @if (isset($tv['providers']['results'][Cookie::get('locale')]))
+                @if (isset($tv['providers']['results'][Cookie::get('locale')]['rent']))
                     <div>
                         <h2 class="text-3xl font-thin uppercase tracking-tight text-center sm:text-5xl text-gray-50">Rentable</h2>                        
                             <div class="grid lg:grid-cols-3 grid-cols-1 mt-2 gap-4">
-                            @foreach($tv['providers']['results']['GB']['rent'] as $provider) 
+                            @foreach($tv['providers']['results'][Cookie::get('locale')]['rent'] as $provider) 
                                 <div class="flex overflow-hidden rounded-lg bg-gray-900 text-gray-100">
                                     <div class="flex items-center justify-center px-4 bg-blue-400 text-gray-800">
                                         <img src="https://image.tmdb.org/t/p/original/{{$provider['logo_path']}}" alt="{{ $provider['provider_name'] }}" class="h-8 rounded mx-4">
@@ -91,13 +91,13 @@
                 @endif
             @endif
 
-            @if (isset($tv['watch/providers']['results']['GB']))
-                @if (isset($tv['watch/providers']['results']['GB']['buy']))
+            @if (isset($tv['watch/providers']['results'][Cookie::get('locale')]))
+                @if (isset($tv['watch/providers']['results'][Cookie::get('locale')]['buy']))
                 <div>
                     <h2 class="text-3xl font-thin uppercase tracking-tight text-center sm:text-5xl text-gray-50">Available to rent</h2>
                     
                         <div class="grid lg:grid-cols-3 grid-cols-1 mt-2 gap-4">
-                        @foreach($tv['watch/providers']['results']['GB']['buy'] as $provider) 
+                        @foreach($tv['watch/providers']['results'][Cookie::get('locale')]['buy'] as $provider) 
                             <div class="flex overflow-hidden rounded-lg bg-gray-900 text-gray-100">
                                 <div class="flex items-center justify-center px-4 bg-green-400 text-gray-800">
                                     <img src="https://image.tmdb.org/t/p/original/{{$provider['logo_path']}}" alt="{{ $provider['provider_name'] }}" class="h-8 rounded mx-4">
@@ -111,12 +111,12 @@
                 </div>
                 @endif
             @endif
-            @if (isset($tv['providers']['results']['GB']))
-                @if (isset($tv['providers']['results']['GB']['buy']))
+            @if (isset($tv['providers']['results'][Cookie::get('locale')]))
+                @if (isset($tv['providers']['results'][Cookie::get('locale')]['buy']))
                     <div>
                         <h2 class="text-3xl font-thin uppercase tracking-tight text-center sm:text-5xl text-gray-50">Purchasable</h2>                        
                             <div class="grid lg:grid-cols-3 grid-cols-1 mt-2 gap-4">
-                            @foreach($tv['providers']['results']['GB']['buy'] as $provider) 
+                            @foreach($tv['providers']['results'][Cookie::get('locale')]['buy'] as $provider) 
                                 <div class="flex overflow-hidden rounded-lg bg-gray-900 text-gray-100">
                                     <div class="flex items-center justify-center px-4 bg-green-400 text-gray-800">
                                         <img src="https://image.tmdb.org/t/p/original/{{$provider['logo_path']}}" alt="{{ $provider['provider_name'] }}" class="h-8 rounded mx-4">

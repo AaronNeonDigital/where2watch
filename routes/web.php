@@ -31,11 +31,11 @@ use Illuminate\Support\Facades\Route;
 //     return redirect()->back();
 // });
 
-Route::get('/', function () {
-    return redirect(app()->getLocale());
-});
+// Route::get('/', function () {
+//     return redirect(app()->getLocale());
+// });
 
-Route::prefix(app()->getLocale())->group(function () {
+// Route::prefix(app()->getLocale())->group(function () {
     Route::get('/', Home::class)->name('home');
 
     Route::get('/movie/{movie_id}', MoviePage::class)->name('movie');
@@ -53,4 +53,4 @@ Route::prefix(app()->getLocale())->group(function () {
 
         return json_decode($movie->body(), true);
     });
-});
+// });
