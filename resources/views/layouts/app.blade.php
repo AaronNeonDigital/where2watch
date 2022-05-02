@@ -4,6 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="
+        Search, Movies, Series, TV, Shows, Netflix, Amazon, Amazon Prime, ITV, BBC, Streaming, Services, Watch, Where to watch, Platforms, BritBox, Disney plus, Sky Go,
+        Now TV, Virgin TV, Online search, Films, Streaming, Watching
+    ">
 
     <title>Where2Watch</title>
 
@@ -16,6 +20,16 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8828295715005095"
      crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1ZVVVL421"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-J1ZVVVL421');
+    </script>
 </head>
 
 <body class="antialiased bg-gray-900">
@@ -71,15 +85,7 @@
     
     <script src="{{  mix('js/app.js')  }}"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1ZVVVL421"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-J1ZVVVL421');
-    </script>
+    
 </body>
 
 </html>
