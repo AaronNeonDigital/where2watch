@@ -17,26 +17,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/{locale?}', function ($locale = null) {
-//     if (isset($locale) && in_array($locale, config('app.available_locales'))) {
-//         app()->setLocale($locale);
-//     }
-    
-//     return view('/');
-// });
 
-// Route::get('language/{locale}', function ($locale) {
-//     app()->setLocale($locale);
-//     session()->put('locale', $locale);
-//     return redirect()->back();
-// });
-
-// Route::get('/', function () {
-//     return redirect(app()->getLocale());
-// });
-
-// Route::prefix(app()->getLocale())->group(function () {
     Route::get('/', Home::class)->name('home');
+
+    Route::get('/policy', function (){
+        return view('privacy-policy');
+    })->name('policy');
 
     Route::get('/movie/{movie_id}', MoviePage::class)->name('movie');
     Route::get('/tv/{tv_id}', TvPage::class)->name('tv');
@@ -46,11 +32,6 @@ use Illuminate\Support\Facades\Route;
             'api_key' => env('TMDB_API_KEY'),
             'append_to_response' => 'watch/providers'
         ]);
-        // $moviesSearch = Http::get('https://api.themoviedb.org/3/search/multi', [
-        //     'api_key' => env('TMDB_API_KEY'),
-        //     'query' => 'foo'
-        // ]);
 
         return json_decode($movie->body(), true);
     });
-// });

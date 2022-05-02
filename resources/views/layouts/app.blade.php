@@ -4,12 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Aaron Lawrence">
+    <meta name="description" content="
+        Search which platforms your film or TV series is on, netflix, Amazon Prime, Disney Plus and many many more, also including 55+ countries. So you are never far from knowing where your favourite Film is.
+    ">
     <meta name="keywords" content="
         Search, Movies, Series, TV, Shows, Netflix, Amazon, Amazon Prime, ITV, BBC, Streaming, Services, Watch, Where to watch, Platforms, BritBox, Disney plus, Sky Go,
         Now TV, Virgin TV, Online search, Films, Streaming, Watching
     ">
+    <link rel="canonical" href="https://www.where2wat.ch" />
 
-    <title>Where2Watch</title>
+    <title>Where2Watch | The Movie Search</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -36,8 +42,8 @@
     <div class="h-max bg-gray-900 text-gray-100">
         <div class="space-y-8">
             <header class="w-full flex items-center justify-between h-16 px-4 mx-auto rounded bg-gray-900">
-                <a rel="noopener noreferrer" href="#" aria-label="Homepage">
-                    <img class="w-48 my-2" src="/storage/img/where2watch.png" alt="Where2Watch">
+                <a rel="noopener noreferrer" href="/" aria-label="Homepage">
+                    <img class="w-48 my-2" src="/storage/img/where2watch.png" alt="Where2Watch" title="Where2Watch Logo">
                 </a>
                 {{-- <div class="items-center hidden space-x-8 lg:flex">
                     <div class="space-x-4">
