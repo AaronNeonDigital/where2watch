@@ -16,7 +16,7 @@
                 <div>
                     <h2 class="text-3xl font-thin uppercase tracking-tight text-center sm:text-5xl text-gray-50">Subscription streams</h2>
                     
-                        <div class="grid grid-cols-4 mt-2 gap-4">
+                        <div class="grid lg:grid-cols-3 grid-cols-1 mt-2 gap-4">
                         @foreach($tv['watch/providers']['results']['GB']['flatrate'] as $provider) 
                             <div class="flex overflow-hidden rounded-lg bg-gray-900 text-gray-100">
                                 <div class="flex items-center justify-center px-4 bg-violet-400 text-gray-800">
@@ -35,7 +35,7 @@
                 @if (isset($tv['providers']['results']['GB']['flatrate']))
                     <div>
                         <h2 class="text-3xl font-thin uppercase tracking-tight text-center sm:text-5xl text-gray-50">Subscription streams</h2>                        
-                            <div class="grid grid-cols-4 mt-2 gap-4">
+                            <div class="grid lg:grid-cols-3 grid-cols-1 mt-2 gap-4">
                             @foreach($tv['providers']['results']['GB']['flatrate'] as $provider) 
                                 <div class="flex overflow-hidden rounded-lg bg-gray-900 text-gray-100">
                                     <div class="flex items-center justify-center px-4 bg-violet-400 text-gray-800">
@@ -56,7 +56,7 @@
                 <div>
                     <h2 class="text-3xl font-thin uppercase tracking-tight text-center sm:text-5xl text-gray-50">Rentable</h2>
                     
-                        <div class="grid grid-cols-4 mt-2 gap-4">
+                        <div class="grid lg:grid-cols-3 grid-cols-1 mt-2 gap-4">
                         @foreach($tv['watch/providers']['results']['GB']['rent'] as $provider) 
                             <div class="flex overflow-hidden rounded-lg bg-gray-900 text-gray-100">
                                 <div class="flex items-center justify-center px-4 bg-blue-400 text-gray-800">
@@ -75,7 +75,7 @@
                 @if (isset($tv['providers']['results']['GB']['rent']))
                     <div>
                         <h2 class="text-3xl font-thin uppercase tracking-tight text-center sm:text-5xl text-gray-50">Rentable</h2>                        
-                            <div class="grid grid-cols-4 mt-2 gap-4">
+                            <div class="grid lg:grid-cols-3 grid-cols-1 mt-2 gap-4">
                             @foreach($tv['providers']['results']['GB']['rent'] as $provider) 
                                 <div class="flex overflow-hidden rounded-lg bg-gray-900 text-gray-100">
                                     <div class="flex items-center justify-center px-4 bg-blue-400 text-gray-800">
@@ -96,7 +96,7 @@
                 <div>
                     <h2 class="text-3xl font-thin uppercase tracking-tight text-center sm:text-5xl text-gray-50">Available to rent</h2>
                     
-                        <div class="grid grid-cols-4 mt-2 gap-4">
+                        <div class="grid lg:grid-cols-3 grid-cols-1 mt-2 gap-4">
                         @foreach($tv['watch/providers']['results']['GB']['buy'] as $provider) 
                             <div class="flex overflow-hidden rounded-lg bg-gray-900 text-gray-100">
                                 <div class="flex items-center justify-center px-4 bg-green-400 text-gray-800">
@@ -115,7 +115,7 @@
                 @if (isset($tv['providers']['results']['GB']['buy']))
                     <div>
                         <h2 class="text-3xl font-thin uppercase tracking-tight text-center sm:text-5xl text-gray-50">Purchasable</h2>                        
-                            <div class="grid grid-cols-4 mt-2 gap-4">
+                            <div class="grid lg:grid-cols-3 grid-cols-1 mt-2 gap-4">
                             @foreach($tv['providers']['results']['GB']['buy'] as $provider) 
                                 <div class="flex overflow-hidden rounded-lg bg-gray-900 text-gray-100">
                                     <div class="flex items-center justify-center px-4 bg-green-400 text-gray-800">
