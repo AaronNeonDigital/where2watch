@@ -34,7 +34,7 @@ class TvPage extends Component
                 $newTv->popularity = $tv['popularity'];
                 $newTv->number_of_episodes = $tv['number_of_episodes'];
                 $newTv->number_of_seasons = $tv['number_of_seasons'];
-                $newTv->episode_run_time = $tv['episode_run_time'][0];
+                $newTv->episode_run_time = $tv['episode_run_time'] ? $tv['episode_run_time'][0]: null;
                 $newTv->first_air_date = $tv['first_air_date'];
                 $newTv->last_air_date = $tv['last_air_date'];
                 $newTv->status = $tv['status'];
