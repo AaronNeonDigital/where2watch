@@ -1,14 +1,14 @@
-<div>
+<div class="flex-1">
     @if ($tv)
     <section class="bg-gray-800 text-gray-100 rounded shadow">
-        <div class="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
+        <div class="w-full p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
             <div class="relative block">
                 @if(isset($tv['backdrop_path']))
                     <img src="https://image.tmdb.org/t/p/original/{{$tv['backdrop_path']}}" alt="{{$tv['name']}}" class="rounded-lg rounded-b-none opacity-25">
                 @endif
                 <div class="lg:absolute top-0 w-full block grid-cols-1 justify-content-center justify-content-middle mt-4">
-                    <h2 class="text-3xl font-bold tracking-tight text-center sm:text-5xl dark:text-coolGray-50">{{$tv['name']}}</h2>
-                    <p class="max-w-3xl mx-auto mt-4 text-xl text-center dark:text-coolGray-400">{{$tv['overview']}}</p>
+                    <h2 class="text-3xl font-bold tracking-tight text-center sm:text-5xl text-gray-50">{{$tv['name']}}</h2>
+                    <p class="max-w-3xl mx-auto mt-4 text-xl text-center text-gray-400">{{$tv['overview']}}</p>
                 </div>
             </div>
             @if (isset($tv['watch/providers']['results']['GB']))
@@ -137,17 +137,21 @@
                         @if (isset($tv['genres']))
                             <div class="flex">
                                 <div class="flex-shrink-0">
-                                    <div class="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-coolGray-900">
+                                    <div class="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 text-gray-900">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor" class="w-7 h-7" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M.1193 494.1c-1.125 9.5 6.312 17.87 15.94 17.87l32.06 .0635c8.125 0 15.21-5.833 16.21-13.83c.7501-4.875 1.869-11.17 3.494-18.17h312c1.625 6.875 2.904 13.31 3.529 18.18c1.125 7.1 7.84 13.94 15.97 13.82l32.46-.0625c9.625 0 17.12-8.374 15.99-17.87c-4.625-37.87-25.75-128.1-119.1-207.7c-17.5 12.37-36.98 24.37-58.48 35.49c6.25 4.625 11.56 9.405 17.06 14.15H159.7c21.25-18.12 47.03-35.63 78.65-51.38c172.1-85.5 203.7-218.8 209.5-266.7c1.125-9.5-6.297-17.88-15.92-17.88L399.6 .001c-8.125 0-14.84 5.832-15.96 13.83c-.7501 4.875-1.869 11.17-3.369 18.17H67.74C66.24 25 65.08 18.81 64.33 13.81C63.21 5.813 56.48-.124 48.36 .001L16.1 .1338c-9.625 0-17.09 8.354-15.96 17.85c5.125 42.87 31.29 153.8 159.9 238.1C31.55 340.3 5.245 451.2 .1193 494.1zM223.9 219.7C198.8 205.9 177.6 191.3 159.7 176h128.5C270.4 191.3 249 206.1 223.9 219.7zM355.1 96c-5.875 10.37-12.88 21.12-21 31.1H113.1c-8.25-10.87-15.3-21.63-21.05-32L355.1 96zM93 415.1c5.875-10.37 12.74-21.13 20.87-32h219.4c8.375 10.87 15.48 21.63 21.23 32H93z"/></svg>
                                     </div>
                                 </div>
                                 <div class="ml-4">
-                                    <h4 class="text-lg font-medium leading-6 dark:text-coolGray-50">Genres</h4>
-                                    <p class="mt-2 dark:text-coolGray-400">
+                                    <h4 class="text-lg font-medium leading-6 text-gray-50">Genres</h4>
+                                    <div class="mt-2 text-gray-400 grid grid-cols-3 gap-2">
                                         @foreach ($tv['genres'] as $genre)
-                                            <span class="text-sm font-medium mr-2 px-2.5 py-0.5 rounded bg-purple-200 text-purple-900">{{$genre['name']}}</span>
+                                            <div class="rounded-lg bg-blue-500 text-gray-100">
+                                                <div class="flex items-center justify-between p-1">
+                                                    <p>{{ $genre['name'] }}</p>
+                                                </div>
+                                            </div>
                                         @endforeach
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
                         @endif
@@ -160,11 +164,15 @@
                                 </div>
                                 <div class="ml-4">
                                     <h4 class="text-lg font-medium leading-6 text-gray-50">Production companies</h4>
-                                    <p class="mt-2 text-gray-400">
+                                    <div class="mt-2 text-gray-400 grid gap-2">
                                         @foreach ($tv['production_companies'] as $companies)
-                                            <span class="text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded bg-blue-200 text-blue-900">{{$companies['name']}}</span>
+                                            <div class="rounded-lg bg-blue-500 text-gray-100">
+                                                <div class="flex items-center justify-between p-1">
+                                                    <p>{{ $companies['name'] }}</p>
+                                                </div>
+                                            </div>
                                         @endforeach
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
                         @endif
@@ -177,11 +185,15 @@
                                 </div>
                                 <div class="ml-4">
                                     <h4 class="text-lg font-medium leading-6 text-gray-50">Created by</h4>
-                                    <p class="mt-2 text-gray-400">
+                                    <div class="mt-2 text-gray-400 grid gap-2">
                                         @foreach ($tv['created_by'] as $created_by)
-                                            <span class="text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded bg-blue-200 text-blue-900">{{$created_by['name']}}</span>
+                                            <div class="rounded-lg bg-blue-500 text-gray-100">
+                                                <div class="flex items-center justify-between p-1">
+                                                    <p>{{ $created_by['name'] }}</p>
+                                                </div>
+                                            </div>
                                         @endforeach
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
                         @endif
@@ -194,11 +206,15 @@
                                 </div>
                                 <div class="ml-4">
                                     <h4 class="text-lg font-medium leading-6 text-gray-50">Networks</h4>
-                                    <p class="mt-2 text-gray-400 flex flex-wrap">
+                                    <div class="mt-2 text-gray-400 grid grid-cols-3 gap-2">
                                         @foreach ($tv['networks'] as $network)
-                                            <span class="text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded bg-blue-200 text-blue-900">{{$network['name']}}</span>
+                                            <div class="rounded-lg bg-blue-500 text-gray-100">
+                                                <div class="flex items-center justify-between p-1">
+                                                    <p>{{ $network['name'] }}</p>
+                                                </div>
+                                            </div>
                                         @endforeach
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
                         @endif
