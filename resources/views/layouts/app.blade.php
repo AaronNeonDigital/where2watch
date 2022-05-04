@@ -24,8 +24,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     @livewireStyles
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8828295715005095"
-     crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        window._mNHandle = window._mNHandle || {};
+        window._mNHandle.queue = window._mNHandle.queue || [];
+        medianet_versionId = "3121199";
+    </script>
+    <script src="https://contextual.media.net/dmedianet.js?cid=8CUEEAM88" async="async"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1ZVVVL421"></script>
@@ -58,6 +62,16 @@
                 <div class="w-full h-max mx-auto space-y-2 mb-64">
                     <section class="grid gap-1">
                         <div class="w-full p-1 rounded-md sm:p-16 xl:col-span-2 bg-gray-900">
+                            <div id="416181528">
+                                <script type="text/javascript">
+                                    try {
+                                        window._mNHandle.queue.push(function (){
+                                            window._mNDetails.loadTag("416181528", "728x90", "416181528");
+                                        });
+                                    }
+                                    catch (error) {}
+                                </script>
+                            </div>
                             @if( !request()->routeIs('home') )
                                 <div class="w-full">
                                     <a type="button" href="/" class="text-white bg-gray-800 hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2">
