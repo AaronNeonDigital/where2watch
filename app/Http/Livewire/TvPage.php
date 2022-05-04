@@ -71,7 +71,8 @@ class TvPage extends Component
             'title' => 'Where 2 Watch | '.$tv['name'],
             'canonical' => 'https://where2wat.ch/tv/'.$this->tv_id,
             'keywords' => $tv['name'].', '.implode(",", $genres).', series, seasons',
-            'description' => 'Check which services are streaming '.$tv['name'].' and where you can watch it, buy it or even rent it. Search more, at where2watch.'
+            'description' => 'Check which services are streaming '.$tv['name'].' and where you can watch it, buy it or even rent it. Search more, at where2watch.',
+            'image' => isset($tv['poster_path']) ? 'https://image.tmdb.org/t/p/original/'.$tv['poster_path'] : '/storage/img/where2watch.png'
         ]);
     }
 }

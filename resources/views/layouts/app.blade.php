@@ -23,7 +23,7 @@
         So you are never far from knowing where your favourite Film is.'}}" />
     <meta property="og:url" content="{{ $canonical ?? 'https://www.where2wat.ch' }}" />
     <meta property="og:site_name" content="Where2Watch" />
-    <meta property="og:image" content="/storage/img/where2watch.png" />
+    <meta property="og:image" content="{{ $image ?? '/storage/img/where2watch.png'}}" />
 
     <link rel="canonical" href="{{ $canonical ?? 'https://www.where2wat.ch' }}" />
     <link rel="icon" type="image/x-icon" href="/storage/img/where2watch.png">

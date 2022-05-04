@@ -62,7 +62,8 @@ class MoviePage extends Component
             'title' => 'Where 2 Watch | '.$movie['title'],
             'canonical' => 'https://where2wat.ch/movie/'.$this->movie_id,
             'keywords' => $movie['title'].', '.implode(",", $genres).', series, seasons',
-            'description' => 'Check which services are streaming '.$movie['title'].' and where you can watch it, buy it or even rent it. Search more, at where2watch.'
+            'description' => 'Check which services are streaming '.$movie['title'].' and where you can watch it, buy it or even rent it. Search more, at where2watch.',
+            'image' => isset($movie['poster_path']) ? 'https://image.tmdb.org/t/p/original/'.$movie['poster_path'] : '/storage/img/where2watch.png'
         ]);
     }
 }
