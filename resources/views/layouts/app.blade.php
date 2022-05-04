@@ -16,8 +16,17 @@
     ">
     <meta name="publisher" content="https://github.com/AaronNeonDigital">
 
+    <meta property="og:locale" content="{{Cookie::get('locale')}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ $title ?? 'Where 2 Watch | Search for your favourite programmes'}}" />
+    <meta property="og:description" content="{{ $description ?? 'Search which platforms your film or TV series is on, netflix, Amazon Prime, Disney Plus and many many more, also including 55+ countries. 
+        So you are never far from knowing where your favourite Film is.'}}" />
+    <meta property="og:url" content="{{ $canonical ?? 'https://www.where2wat.ch' }}" />
+    <meta property="og:site_name" content="Where2Watch" />
+    <meta property="og:image" content="/storage/img/where2watch.png" />
+
     <link rel="canonical" href="{{ $canonical ?? 'https://www.where2wat.ch' }}" />
-    
+    <link rel="icon" type="image/x-icon" href="/storage/img/where2watch.png">
     <title>{{ $title ?? 'Where 2 Watch | Search for your favourite programmes'}}</title>
 
     <!-- Fonts -->
