@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Tv;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Session;
 use Livewire\Component;
 
 class TvPage extends Component
@@ -63,8 +64,8 @@ class TvPage extends Component
         foreach($tv['genres'] as $genre){
             array_push($genres, $genre['name']);
         }
+        Session::put('lastViewed', 'tv-'.$this->tv_id);
 
-        //$this->title = 'Where 2 Watch | '.$tv['name'];
         return view('livewire.tv-page',[
             'tv' => $tv
         ])->layout('layouts.app', [

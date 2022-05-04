@@ -56,6 +56,8 @@ class MoviePage extends Component
         foreach($movie['genres'] as $genre){
             array_push($genres, $genre['name']);
         }
+
+        Session::put('lastViewed', 'movie-'.$this->movie_id);
         return view('livewire.movie-page',[
             'movie' => $movie
         ])->layout('layouts.app', [

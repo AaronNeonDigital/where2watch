@@ -1,5 +1,5 @@
 <div class="w-full relative py-2" x-data="{ searchresults: true }">
-    <input type="search" name="search" class="w-full px-4 py-1 text-gray-800 rounded-full focus:outline-none border boder-gray-300" placeholder="search"
+    <input type="search" name="search" class="w-full px-4 py-3 text-gray-800 rounded-full focus:outline-none border boder-gray-300" placeholder="search"
     autocomplete="off" wire:model.debounce.300ms="search" @keyup="searchresults=true">
     
         

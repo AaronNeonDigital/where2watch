@@ -47,29 +47,21 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1ZVVVL421"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'G-J1ZVVVL421');
+        gtag('config', 'G-J1ZVVVL421');
     </script>
 </head>
 
 <body class="antialiased bg-gray-900">
     <div class="h-max bg-gray-900 text-gray-100">
         <div class="space-y-8">
-            <header class="w-full flex items-center justify-between h-16 px-4 mx-auto rounded bg-gray-900">
-                <a rel="noopener noreferrer" href="/" aria-label="Homepage">
-                    <img class="w-48 my-2" src="/storage/img/where2watch.png" alt="Where2Watch" title="Where2Watch Logo">
+            <header class="w-full flex items-center justify-center px-4 mx-auto rounded bg-gray-900">
+                <a rel="noopener noreferrer" href="/" aria-label="Homepage" class="self-center">
+                    <img class="w-64 my-2" src="/storage/img/where2watch.png" alt="Where2Watch" title="Where2Watch Logo">
                 </a>
-                {{-- <div class="items-center hidden space-x-8 lg:flex">
-                    <div class="space-x-4">
-                        <a rel="noopener noreferrer" href="#">Link</a>
-                        <a rel="noopener noreferrer" href="#">Link</a>
-                        <a rel="noopener noreferrer" href="#">Link</a>
-                    </div>
-                    <button class="px-4 py-2 rounded-md dark:bg-violet-400 text-gray-900">Sign up</button>
-                </div> --}}
             </header>
             <main>
                 <div class="w-full h-max mx-auto space-y-2 mb-64">
@@ -95,6 +87,7 @@
                                 </div>
                             @endif
                             {{  $slot  }}
+                            @livewire('recently-viewed')
                         </div>
                     </section>
                 </div>
