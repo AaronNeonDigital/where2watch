@@ -52,8 +52,17 @@ class MoviePage extends Component
 
             }
         }
+        $genres = [];
+        foreach($movie['genres'] as $genre){
+            array_push($genres, $genre['name']);
+        }
         return view('livewire.movie-page',[
             'movie' => $movie
-        ])->layout('layouts.app');
+        ])->layout('layouts.app', [
+            'title' => 'Where 2 Watch | '.$movie['title'],
+            'canonical' => 'https://where2wat.ch/movie/'.$this->movie_id,
+            'keywords' => $movie['title'].', '.implode(",", $genres).', series, seasons',
+            'description' => 'Check which services are streaming '.$movie['title'].' and where you can watch it, buy it or even rent it. Search more, at where2watch.'
+        ]);
     }
 }

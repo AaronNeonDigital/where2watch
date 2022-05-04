@@ -9,6 +9,7 @@ use Livewire\Component;
 class TvPage extends Component
 {
     public $tv_id;
+    public $title = "";
  
     public function mount($tv_id)
     {        
@@ -58,8 +59,19 @@ class TvPage extends Component
 
             }
         }
+        $genres = [];
+        foreach($tv['genres'] as $genre){
+            array_push($genres, $genre['name']);
+        }
+
+        //$this->title = 'Where 2 Watch | '.$tv['name'];
         return view('livewire.tv-page',[
             'tv' => $tv
-        ])->layout('layouts.app');
+        ])->layout('layouts.app', [
+            'title' => 'Where 2 Watch | '.$tv['name'],
+            'canonical' => 'https://where2wat.ch/tv/'.$this->tv_id,
+            'keywords' => $tv['name'].', '.implode(",", $genres).', series, seasons',
+            'description' => 'Check which services are streaming '.$tv['name'].' and where you can watch it, buy it or even rent it. Search more, at where2watch.'
+        ]);
     }
 }

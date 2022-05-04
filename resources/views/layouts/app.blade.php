@@ -7,15 +7,18 @@
 
     <meta name="author" content="Aaron Lawrence">
     <meta name="description" content="
-        Search which platforms your film or TV series is on, netflix, Amazon Prime, Disney Plus and many many more, also including 55+ countries. So you are never far from knowing where your favourite Film is.
+    {{ $description ?? 'Search which platforms your film or TV series is on, netflix, Amazon Prime, Disney Plus and many many more, also including 55+ countries. 
+        So you are never far from knowing where your favourite Film is.'}}
     ">
     <meta name="keywords" content="
         Search, Movies, Series, TV, Shows, Netflix, Amazon, Amazon Prime, ITV, BBC, Streaming, Services, Watch, Where to watch, Platforms, BritBox, Disney plus, Sky Go,
-        Now TV, Virgin TV, Online search, Films, Streaming, Watching
+        Now TV, Virgin TV, Online search, Films, Streaming, Watching, {{$keywords ?? ''}}
     ">
-    <link rel="canonical" href="https://www.where2wat.ch" />
+    <meta name="publisher" content="https://github.com/AaronNeonDigital">
 
-    <title>Where2Watch | The Movie Search</title>
+    <link rel="canonical" href="{{ $canonical ?? 'https://www.where2wat.ch' }}" />
+    
+    <title>{{ $title ?? 'Where 2 Watch | Search for your favourite programmes'}}</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
