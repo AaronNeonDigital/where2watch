@@ -87,7 +87,6 @@
                                 </div>
                             @endif
                             {{  $slot  }}
-                            @livewire('recently-viewed')
                         </div>
                     </section>
                 </div>
