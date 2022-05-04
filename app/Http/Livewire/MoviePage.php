@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Movies;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Session;
 use Livewire\Component;
 
 class MoviePage extends Component
