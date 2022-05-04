@@ -1,5 +1,8 @@
 <div>    
     @livewire('movie-search')
 
-    @livewire('recently-viewed')
+    @if (Session::has('lastViewed'))
+        @livewire('recently-viewed')
+    @endif
+   
 </div>
