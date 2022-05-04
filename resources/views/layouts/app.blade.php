@@ -24,6 +24,7 @@
     <meta property="og:url" content="{{ $canonical ?? 'https://www.where2wat.ch' }}" />
     <meta property="og:site_name" content="Where2Watch" />
     <meta property="og:image" content="{{ $image ?? '/storage/img/where2watch.png'}}" />
+    <link rel="image_src" href="{{ $image ?? '/storage/img/where2watch.png'}}"/>
 
     <link rel="canonical" href="{{ $canonical ?? 'https://www.where2wat.ch' }}" />
     <link rel="icon" type="image/x-icon" href="{{ $image ?? '/storage/img/where2watch.png'}}">
