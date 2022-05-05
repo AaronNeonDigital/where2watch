@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     @livewireStyles
-
+    <meta name="propeller" content="37618e882343e950bb05bb21f84b3354">
     <script type="text/javascript">
         window._mNHandle = window._mNHandle || {};
         window._mNHandle.queue = window._mNHandle.queue || [];
