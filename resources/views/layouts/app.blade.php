@@ -53,7 +53,7 @@
 
         gtag('config', 'G-J1ZVVVL421');
     </script>
-
+        <script>(function(d,z,s){s.src='//'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('oaphoace.net',5068765,document.createElement('script'))</script>
     </head>
 
 <body class="antialiased bg-gray-900">
